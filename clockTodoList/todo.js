@@ -3,18 +3,37 @@ const toDoForm = document.querySelector(".js-toDoForm"),
         toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos'
-const toDos = [];
+let  toDos = [];
 
+
+
+function deleteToDo(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+      
+    const cleanToDos = toDos.filter(function(toDo) {
+      
+    console.log(toDo.id , parseInt(li.id));
+        return toDo.id !== parseInt(li.id);
+    });
+      
+    toDos = cleanToDos;
+    saveToDos();
+  }
+  
 function saveToDos(){
-    localStorage.setItem(TODOS_LS,toDos)
+    localStorage.setItem(TODOS_LS,JSON.stringify(toDos))
 }
 
 function paintToDo(text){
      const li = document.createElement("li");
      const deletBtn = document.createElement("button")
-     deletBtn.innerText= "del"
      const span = document.createElement("span");
      const newId=toDos.length + 1;
+     
+     deletBtn.innerText= "del"
+     deletBtn.addEventListener("click", deleteToDo);
      span.innerText = text;
 
      li.id=newId
@@ -42,15 +61,14 @@ function handleSubmit(event){
 
 function loadToDo(){
     const loadTodos = localStorage.getItem(TODOS_LS);
-    if(loadTodos!==null){
-        const todo = JSON.stringify(loadTodos);
-        console.log(todo)
-        todo.forEach(element => {
-            console.log(element)
-        });
-       
-    }
 
+
+    if(loadTodos!==  null){
+        const parsedToDos = JSON.parse(loadTodos);
+        parsedToDos.forEach(function(toDo) {
+            paintToDo(toDo.text)
+        })
+    }
 }        
 
 function init(){
