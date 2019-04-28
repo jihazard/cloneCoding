@@ -62,3 +62,16 @@
     background-color: #fff;
     border-radius: 10px;
 }
+
+.paging{
+    margin : 20px 10px 7px;
+    font-size:13px;
+    color: #bd5a00;
+}
+
+.current{
+        margin : 20px 10px 7px;
+        font-size:13px;
+        color: yellow;
+   
+}

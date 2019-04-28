@@ -5,6 +5,7 @@ const searchBtn = searchdiv.querySelector("button")
 const body = document.querySelector(".body")
 const total = body.querySelector(".total")
 const list = body.querySelector(".list")
+let totalNumber =0
 
 const SEARCH_FASTFOOD_API_URL ="https://floating-harbor-78336.herokuapp.com/fastfood"
 
@@ -12,13 +13,13 @@ function searchFastFoodRestrant(page,perPage, keyword){
     if(typeof page !== 'number'  || page < 1) page =1 ;
     if(typeof perPage !== 'number'  || perPage < 1) perPage =10 ;
 
-
     const url = SEARCH_FASTFOOD_API_URL +`?searchKeyword=${keyword}&page=${page}&perPage=${perPage}`
     fetch(url).then(function(response ){
         return response.json() 
     }).then(function(json){
 
         total.innerText=`${json.total} 개 검색되었습니다.`
+        totalNumber = json.total;
         const fastFoodList = json.list;
         fastFoodList.forEach(function(ele){
             paintRastrantList(ele)
