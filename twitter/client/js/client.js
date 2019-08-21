@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const loading = document.querySelector('.loading');
-
+const API_URL = "/mews"
 
 loading.style.display='none'
 
@@ -21,4 +21,14 @@ form.addEventListener('submit', (event) => {
   console.log(mew);
   form.style.display='none'
   loading.style.display=''
+
+  fetch("http://localhost:500/mews", {
+    method:'POST',
+    body: JSON.stringify(mew),
+    headers: {
+      'content-type':'application/json'
+    }
+  
+  })
+
 });
