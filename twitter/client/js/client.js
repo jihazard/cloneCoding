@@ -19,7 +19,7 @@ form.addEventListener('submit', (event) => {
   };
 
   console.log(mew);
-  form.style.display='none'
+  form.style.display='none' 
   loading.style.display=''
 
   fetch("http://localhost:500/mews", {

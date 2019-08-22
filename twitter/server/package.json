@@ -11,7 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cassandra-driver": "^4.1.0",
     "express": "^4.17.1",
+    "mongo-portable": "^2.0.3",
+    "mongodb": "^3.3.0",
     "monk": "^7.0.0",
     "morgan": "^1.9.1"
   },
