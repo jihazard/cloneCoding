@@ -38,7 +38,7 @@ form.addEventListener('submit', (event) => {
     form.reset()
     loading.style.display='none';
     form.style.display='' 
-    listAllMews()
+    listAllMews() 
   })
 
 });
@@ -58,8 +58,12 @@ function listAllMews() {
      const content = document.createElement('p')
      content.textContent= mew.content;
 
+      const date = document.createElement('p')
+      date.textContent= mew.created;
+     
      div.appendChild(header)
      div.appendChild(content)
+     div.appendChild(date)
      mewsx.appendChild(div)
      
       
