@@ -1,8 +1,11 @@
 const form = document.querySelector('form');
 const loading = document.querySelector('.loading');
 const API_URL = "/mews"
+const mewsx = document.querySelector('.mews2')
 
 loading.style.display='none'
+
+listAllMews();
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -29,6 +32,37 @@ form.addEventListener('submit', (event) => {
       'content-type':'application/json'
     }
   
+  }).then(response => response.json())
+  .then(createdmew => {
+    console.log(createdmew)
+    form.reset()
+    loading.style.display='none';
+    form.style.display='' 
+    listAllMews()
   })
 
 });
+
+
+function listAllMews() {
+  fetch("//localhost:500/mews",{
+    method:'GET'
+
+  }).then(response => response.json())
+  .then(mews=>{
+    console.log(mews)
+    mews.forEach(mew => {
+     const div = document.createElement('div')
+     const header = document.createElement('h3')
+     header.textContent=mew.name;
+     const content = document.createElement('p')
+     content.textContent= mew.content;
+
+     div.appendChild(header)
+     div.appendChild(content)
+     mewsx.appendChild(div)
+     
+      
+    })
+  })
+}
