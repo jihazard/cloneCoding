@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav class="nav">
+          <div class="nav-left">
+            <a class="nav-item">
+              <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+            </a>
+          </div>
+        
+          <div class="nav-center">
+            <a class="nav-item">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+            <a class="nav-item">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+            </a>
+          </div>
+        
+          <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+          <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+          <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        
+          <!-- This "nav-menu" is hidden on mobile -->
+          <!-- Add the modifier "is-active" to display it on mobile -->
+          <div class="nav-right nav-menu">
+            <a class="nav-item">
+              Home
+            </a>
+            <a class="nav-item">
+              Documentation
+            </a>
+            <a class="nav-item">
+              Blog
+            </a>
+        
+            <span class="nav-item">
+              <a class="button" >
+                <span class="icon">
+                  <i class="fa fa-twitter"></i>
+                </span>
+                <span>Tweet</span>
+              </a>
+              <a class="button is-primary">
+                <span class="icon">
+                  <i class="fa fa-download"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </nav>
+        <section class="hero">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Hero title
+              </h1>
+              <h2 class="subtitle">
+                Hero subtitle
+              </h2>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <div class="notification">
+            <div class="columns">
+              <div class="column is-2">
+                <aside class="menu">
+                  <p class="menu-label">
+                    General
+                  </p>
+                  <ul class="menu-list">
+                    <li><a>Dashboard</a></li>
+                    <li><a>Customers</a></li>
+                  </ul>
+                  <p class="menu-label">
+                    Administration
+                  </p>
+                  <ul class="menu-list">
+                    <li><a>Team Settings</a></li>
+                    <li>
+                      <a class="is-active">Manage Your Team</a>
+                      <ul>
+                        <li><a>Members</a></li>
+                        <li><a>Plugins</a></li>
+                        <li><a>Add a member</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Invitations</a></li>
+                    <li><a>Cloud Storage Environment Settings</a></li>
+                    <li><a>Authentication</a></li>
+                  </ul>
+                  <p class="menu-label">
+                    Transactions
+                  </p>
+                  <ul class="menu-list">
+                    <li><a>Payments</a></li>
+                    <li><a>Transfers</a></li>
+                    <li><a>Balance</a></li>
+                  </ul>
+                </aside>
+              </div>
+              <div class="column is-10">
+                <nav class="panel">
+                  <p class="panel-heading">
+                    Repositories
+                  </p>
+                  <div class="panel-block">
+                    <p class="control has-icon">
+                      <input class="input is-small" type="text" placeholder="Search">
+                      <span class="icon is-small">
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <p class="panel-tabs">
+                    <a class="is-active">All</a>
+                    <a>Public</a>
+                    <a>Private</a>
+                    <a>Sources</a>
+                    <a>Forks</a>
+                  </p>
+                  <a class="panel-block is-active">
+                    <span class="panel-icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    bulma
+                  </a>
+                  <a class="panel-block">
+                    <span class="panel-icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    marksheet
+                  </a>
+                  <a class="panel-block">
+                    <span class="panel-icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    minireset.css
+                  </a>
+                  <a class="panel-block">
+                    <span class="panel-icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    jgthms.github.io
+                  </a>
+                  <a class="panel-block">
+                    <span class="panel-icon">
+                      <i class="fa fa-code-fork"></i>
+                    </span>
+                    daniellowtw/infBoard
+                  </a>
+                  <a class="panel-block">
+                    <span class="panel-icon">
+                      <i class="fa fa-code-fork"></i>
+                    </span>
+                    mojs
+                  </a>
+                  <label class="panel-block">
+                    <input type="checkbox">
+                    Remember me
+                  </label>
+                  <div class="panel-block">
+                    <button class="button is-primary is-outlined is-fullwidth">
+                      Reset all filters
+                    </button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered">
+                <p>
+                  <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                  <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                  is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+                </p>
+                <p>
+                  <a class="icon" href="https://github.com/jgthms/bulma">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </footer>
+        </div>
+    </body>
+</html>
